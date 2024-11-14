@@ -1,0 +1,22 @@
+﻿<Window x:Class="A_utility_for_monitoring_and_analyzing_file.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Утилита для мониторинга и анализа файлов" Height="450" Width="800">
+    <Grid>
+        <TextBox Name="DirectoryPathTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="500" Margin="10"/>
+        <Button Content="Выбрать директорию" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="520,10,0,0" Click="SelectDirectoryButton_Click"/>
+
+        <DataGrid Name="FilesDataGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Width="760" Height="200" Margin="10,85,0,0"/>
+
+        <Label Name="FileCountLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,260,0,0"/>
+        <Label Name="DirectoryCountLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,290,0,0"/>
+        <Label Name="TotalSizeLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,320,0,0"/>
+
+        <Button Content="Сравнить директории" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="10,360,0,0" Click="CompareDirectoriesButton_Click"/>
+        <Button Content="Экспортировать в файл" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="170,360,0,0" Click="ExportToFileButton_Click"/>
+        <Button Content="Выбрать второй каталог" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="520,50,0,0" Click="SelectDirectoryButton2_Click"/>
+        <TextBox Name="DirectoryPathTextBox2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="500" Margin="10,50,0,0"/>
+        <ListBox x:Name="DifferencesListBox" Margin="400,295,30,10" />
+
+    </Grid>
+</Window>
